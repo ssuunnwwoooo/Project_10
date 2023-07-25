@@ -3,13 +3,14 @@
 
     position: fixed;
     inset: 0 0 0 0;
-    height: 90px;
+
+    height: 30px;
 
     padding: 30px 0;
-
     z-index: 9999;
 
     transition: 0.5s;
+
 }
 
 
@@ -51,16 +52,103 @@
 }
 
 /* ----------------------------- */
-.main_Visual .main {}
+
+#fp-nav ul li a.active span {
+    background: none;
+    border: 2px solid red;
+}
+
+#fp-nav ul li a span {
+    background: none;
+    border: 1px solid #ddd;
+}
+
+.main_Visual {
+    overflow: hidden;
+}
+
+.main_Visual .main {
+    position: relative;
+}
 
 .main_Visual .main video {
+    position: absolute;
+    top: 0;
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
+
+.main_Visual .main .txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(60%, 350%);
+    font-size: 100px;
+    font-family: 'Sigmar';
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.main .txt::before {
+    content: "BRICK CAMPUS";
+    position: absolute;
+    color: rgb(194, 0, 0);
+    animation: animate 4s ease-in-out infinite;
+}
+
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
+
+
+/* 텍스트 애니메이션주기 */
 
 
 .main_Visual .img01 {
     background: url(../images/visual01.jpg) center center/cover;
+}
 
+.main_Visual .img {
+    position: relative;
+    z-index: 1;
+}
+
+.main_Visual .img::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.726) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .main_Visual .img02 {
@@ -71,30 +159,126 @@
     background: url(../images/visual03.jpg) center center/cover;
 }
 
-.main_Visual .box01 {
-    background: url(../images/main01.png) center center/cover;
-}
+.main_Visual .box01 {}
 
 
-.main_Visual .box02 {
-    background: url(../images/main02.jpg) center center/cover;
-}
 
-.main_Visual .box03 {
-    background: url(../images/main03.jpg) center center/cover;
+.main_Visual .txt_box {
+    color: #f0f0f0;
 }
 
 .main_Visual .txt_box h2 {
     font-size: 50px;
-    color: #f0f0f0;
-    margin: 0 0 15px 0;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: 1.5px;
+    margin: 0 0 30px 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .main_Visual .txt_box p {
-    color: #fff;
+    line-height: 30px;
+    color: #d3d3d3;
 }
 
-.img01 .txt_box {
-    text-align: center;
+/* --------------------------- */
+
+
+.section .Awrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section .Awrap .txt_box {
+    position: relative;
+    transform: translate(0, 0);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.section.on .Awrap .txt_box {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.section .Awrap .img_box {
+    transform: translate(0, 100%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.section.on .Awrap .img_box {
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+
+.section .Awrap img {
+    width: 251px;
+    height: 251px;
+    border: 5px solid #ddd;
+    box-shadow: 8px 10px 12px -3px rgba(0, 0, 0, 0.48);
+}
+
+
+.section .Awrap .img_box2 {
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.section.on .Awrap .img_box2 {
+    transform: translate(0, 50%);
+    opacity: 1;
+}
+
+
+/*  */
+
+.section .Bwrap {}
+
+.section .Bwrap .txt_box {
+    float: right;
+    text-align: right;
+    transform: translate(200%, 0);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.section.on .Bwrap .txt_box {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/*  */
+.section .Cwrap .txt_box {
+    transform: translate(-100%, 0);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.section.on .Cwrap .txt_box {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/*  */
+
+.main_Visual .box01 {
+    background: linear-gradient(90deg, rgba(231, 231, 231, 1) 85%, rgba(255, 255, 255, 0) 85%);
+}
+
+.section .Dwrap h3 {
+    font-size: 30px;
+}
+
+.section .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section .content .img_box img {
+    width: 100%;
+    max-width: 957px;
+
 }
