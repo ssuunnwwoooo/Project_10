@@ -129,7 +129,43 @@
 }
 
 
-/* 텍스트 애니메이션주기 */
+
+.main .scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 20px;
+    text-align: center;
+}
+
+.main .scroll span {
+    display: block;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+}
+
+.main .scroll i {
+    display: block;
+    font-size: 30px;
+    padding-bottom: 25px;
+    animation: scroll 1.4s linear 0s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        padding-bottom: 25px;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        padding-bottom: 0;
+        opacity: 0;
+    }
+}
 
 
 .main_Visual .img01 {
@@ -375,8 +411,8 @@
     position: absolute;
     bottom: 20%;
     left: 40%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background: url(../images/icon01.png) no-repeat center center/cover;
     background-size: contain;
     transition: 1s;
@@ -417,9 +453,9 @@
     content: "";
     position: absolute;
     bottom: 20%;
-    left: 42%;
-    width: 100px;
-    height: 100px;
+    left: 40%;
+    width: 120px;
+    height: 120px;
     background: url(../images/icon02.png) no-repeat center center/cover;
     background-size: contain;
     transition: 0.5s;
@@ -456,9 +492,9 @@
     content: "";
     position: absolute;
     bottom: 20%;
-    left: 42.5%;
-    width: 100px;
-    height: 100px;
+    left: 41%;
+    width: 120px;
+    height: 120px;
     background: url(../images/icon03.png) no-repeat center center/cover;
     background-size: contain;
     transition: 0.5s;
@@ -553,7 +589,7 @@
 }
 
 .footer {
-    background: #333;
+    background: #030303;
     padding: 50px 0;
 }
 
@@ -570,12 +606,12 @@
 
 .footer .link>ul i {
     font-size: 30px;
-    color: #a5a5a5;
+    color: #636363;
 }
 
 .footer .ft_md {
     line-height: 30px;
-    color: #ddd;
+    color: #6d6d6d;
 }
 
 .footer .ft_md>ul {
@@ -628,11 +664,11 @@
         /* b */
         width: 100%;
         height: 100%;
-        background: #fff;
+        background: url(../images/m_bg.png)no-repeat center bottom -10px /cover;
         padding: 0;
         color: #000;
-        opacity: 0;
         visibility: hidden;
+        opacity: 0;
     }
 
     .header.on {
@@ -700,6 +736,7 @@
     }
 
     .gnb li:hover::before {
+        /* b */
         width: 0;
     }
 
@@ -791,9 +828,6 @@
         background: url(../images/visual03.jpg) center center/cover;
     }
 
-    .main_Visual .box01 {}
-
-
 
     .main_Visual .txt_box {
         color: #f0f0f0;
@@ -843,7 +877,7 @@
 
 
     .section .Awrap .txt_box h2 {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .section .Awrap .txt_box p {
@@ -1278,10 +1312,6 @@
         color: #ddd;
     }
 
-    .footer {
-        background: #333;
-        padding: 50px 0;
-    }
 
     .footer .ft_top {
         display: flex;
@@ -1305,14 +1335,12 @@
 
     .footer .link>ul i {
         font-size: 30px;
-        color: #a5a5a5;
         /* b */
         font-size: 20px;
     }
 
     .footer .ft_md {
         line-height: 30px;
-        color: #ddd;
         /* b */
         line-height: 25px;
         font-size: 13px;
@@ -1349,9 +1377,10 @@
         position: fixed;
         top: 15px;
         right: 15px;
-        font-size: 45px;
+        font-size: 30px;
         z-index: 9999;
-        background: rgba(255, 255, 255, 0.507);
+        color: #000;
+        background: rgba(221, 221, 221, 0.473);
         border-radius: 5px;
     }
 
