@@ -747,6 +747,10 @@
 
     /* ----------------------------- */
 
+    #fp-nav {
+        transform: translateX(55%);
+    }
+
     #fp-nav ul li a.active span {
         background: none;
         border: 2px solid red;
