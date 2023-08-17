@@ -65,10 +65,13 @@
 
 .main_Visual {
     overflow: hidden;
+
 }
 
 .main_Visual .main {
     position: relative;
+    background: url(../images/Hello\,BRICK\ CAMPUS!.mp4);
+    height: 100vh;
 }
 
 .main_Visual .main video {
@@ -213,7 +216,7 @@
 }
 
 .main_Visual .txt_box p {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 25px;
     color: #d3d3d3;
 }
@@ -528,8 +531,8 @@
     position: relative;
     max-width: 360px;
     height: 100px;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 17px;
+    line-height: 21px;
 
 }
 
@@ -611,8 +614,10 @@
 }
 
 .footer .ft_md {
-    line-height: 30px;
+    display: flex;
+    gap: 30px;
     color: #6d6d6d;
+    white-space: nowrap;
 }
 
 .footer .ft_md>ul {
@@ -1357,6 +1362,8 @@
     .footer .ft_md {
         line-height: 30px;
         /* b */
+        gap: 0;
+        flex-direction: column;
         line-height: 25px;
         font-size: 13px;
     }
