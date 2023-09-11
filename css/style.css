@@ -615,7 +615,7 @@
 
 .footer .ft_md {
     display: flex;
-    gap: 30px;
+    gap: 15px;
     color: #6d6d6d;
     white-space: nowrap;
 }
@@ -627,13 +627,8 @@
 }
 
 .footer .ft_md>ul strong {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
-}
-
-.footer .ft_md span {
-    display: block;
-    margin: 0 0 20px 0;
 }
 
 .mopen {
