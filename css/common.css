@@ -37,6 +37,12 @@ body {
     padding: 0 15px;
 }
 
+.i__nner {
+    max-width: 1200px;
+    margin: 250px auto;
+    padding: 0 15px;
+}
+
 .sec {
     padding: 50px;
 }
